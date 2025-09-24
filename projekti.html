@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projekti.css">
+     <style>
+    .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+    }
+    </style>
+    <title>Projekti</title>
+</head>
+<body>
+    <a href="onama.html" style="position: absolute; left: 20px; top: 20px; font-size: 2.2rem; color: white; z-index: 2;">&larr; Natrag</a>
+    <a href="kontakt.html" style="position: absolute; right: 20px; top: 20px; font-size: 2.2rem; color: white; z-index: 2;">Dalje &rarr;</a>
+     <header>
+    <h1>
+        <span class="wavy-letter">P</span>
+        <span class="wavy-letter">r</span>
+        <span class="wavy-letter">o</span>
+        <span class="wavy-letter">j</span>
+        <span class="wavy-letter">e</span>
+        <span class="wavy-letter">k</span>
+        <span class="wavy-letter">t</span>
+        <span class="wavy-letter">i</span>
+    </h1>
+</header>
+    <main>
+        <section>
+            <p>Radionica izrade životopisa u knjižnici Fakulteta hrvatskih studija, u kolaboraciji s Mag. Soc. Marijanom Alagušić - 14. 5. 2025.</p>
+            <div style="display: flex; flex-direction: row; justify-content: center; gap: 32px; margin: 24px 0;">
+                <img src="Slike/fhs1.jpeg" alt="Projekt 1" style="max-width:525px; width:100%; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.15);" />
+                <img src="Slike/fhs2.jpg" alt="Projekt 2" style="max-width:525px; width:100%; border-radius:14px; box-shadow:0 2px 12px rgba(0,0,0,0.15);" />
+            </div>
+        </section>
+    </main>
+    <video autoplay loop muted playsinline class="video-bg">
+        <source src="Slike/Videopozadina.mp4.mp4" type="video/mp4">
+    </video>
+    <script src="fade-transition.js"></script>
+</body>
+</html>

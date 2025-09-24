@@ -1,0 +1,222 @@
+/* Curved h1 below logo - pure CSS solution */
+.curved-below {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    position: relative;
+    height: 120px;
+}
+.curved-below span {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform-origin: bottom center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.1em;
+    white-space: pre;
+}
+
+
+body {
+    /* background-image removed for video background */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.0); /* Adjust opacity here */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure content is above the overlay */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.logo-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    position: relative;
+    gap: 24px; /* Adjustable separation between logo and h1 */
+}
+.logo-img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 35px; /* Moved logo higher */
+    margin-bottom: 16px; /* Adjustable separation below logo */
+    position: relative;
+    z-index: 1;
+    animation: logoPulse 2s infinite ease-in-out;
+}
+/* Video background styling */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+h1 {
+    font-family: 'Rouge Script', cursive;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top: 0;
+    margin-bottom: 24px; /* Adjustable separation below h1 */
+    font-size: 2.8rem;
+}
+nav ul li a {
+    font-family: 'Rouge Script', cursive;
+    font-size: 2.8rem;
+}
+        nav {
+            padding: 10px 0;
+                margin-bottom: 24px; /* Adjustable separation below nav if needed */
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    background: rgba(0,0,0,0.5);
+    padding: 8px 24px;
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+        }
+        nav ul li a:hover {
+    background: #b3e0ff;
+    color: #003366;
+    text-decoration: none;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 8px;
+        }
+        section h2 {
+            text-align: center;
+            color: #333;
+        }
+        section p {
+            color: #555;
+            line-height: 1.6;
+        }
+        footer {
+            text-align: center;
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+    .fade-bg {
+        animation: fadeBackground 2s forwards;
+    }
+
+    @keyframes fadeBackground {
+        from { background-color: transparent; }
+        to { background-color: rgba(255, 255, 255, 0.8); }
+    }
+
+.fade-out {
+	animation: fadeOutPage 0.5s forwards;
+}
+
+.fade-in {
+	animation: fadeInPage 0.5s;
+}
+
+@keyframes fadeOutPage {
+	to {
+		opacity: 0;
+		transform: scale(0.98);
+	}
+}
+
+@keyframes fadeInPage {
+	from {
+		opacity: 0;
+		transform: scale(1.02);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes wave {
+	0%, 100% { transform: translateY(0);}
+	20% { transform: translateY(-12px);}
+	40% { transform: translateY(0);}
+	60% { transform: translateY(8px);}
+	80% { transform: translateY(0);}
+}
+
+.wavy-letter {
+	display: inline-block;
+	animation: wave 1.5s infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.wavy-letter:nth-child(1) { animation-delay: 0s; }
+.wavy-letter:nth-child(2) { animation-delay: 0.08s; }
+.wavy-letter:nth-child(3) { animation-delay: 0.16s; }
+.wavy-letter:nth-child(4) { animation-delay: 0.24s; }
+.wavy-letter:nth-child(5) { animation-delay: 0.32s; }
+.wavy-letter:nth-child(6) { animation-delay: 0.40s; }
+.wavy-letter:nth-child(7) { animation-delay: 0.48s; }
+.wavy-letter:nth-child(8) { animation-delay: 0.56s; }
+.wavy-letter:nth-child(9) { animation-delay: 0.64s; }
+.wavy-letter:nth-child(10) { animation-delay: 0.72s; }
+.wavy-letter:nth-child(11) { animation-delay: 0.80s; }
+.wavy-letter:nth-child(12) { animation-delay: 0.88s; }
+.wavy-letter:nth-child(13) { animation-delay: 0.96s; }
+.wavy-letter:nth-child(14) { animation-delay: 1.04s; }
+.wavy-letter:nth-child(15) { animation-delay: 1.12s; }
+.wavy-letter:nth-child(16) { animation-delay: 1.20s; }
+.wavy-letter:nth-child(17) { animation-delay: 1.28s; }
+.wavy-letter:nth-child(18) { animation-delay: 1.36s; }
+.wavy-letter:nth-child(19) { animation-delay: 1.44s; }
+.wavy-letter:nth-child(20) { animation-delay: 1.52s; }
+
+@keyframes logoPulse {
+	0%, 100% { transform: scale(1);}
+	50% { transform: scale(1.08);}
+}
